@@ -35,12 +35,5 @@ public class MyDiceTest extends RobotApplication {
         return null;
     }
 
-    public class TestListener {
-        @Listen(MsgGetTypes.msgGroup)
-        @Filter(value = "你好", at = true, keywordMatchType = KeywordMatchType.TRIM_REGEX)
-        public boolean start(MsgGroup msgGroup, QQWebSocketMsgSender sender, CQCodeUtil cqCodeUtil) {
-            sender.sendGroupMsg(msgGroup.getFromGroup(), "大家好~");
-            return true;
-        }
-    }
+
 }
